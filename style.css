@@ -1,0 +1,9 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.hero-overlay {
+  @apply absolute inset-0 bg-black/50;
+}
