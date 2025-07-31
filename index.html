@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Physio – Physiotherapie in Berlin Französisch Buchholz</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
@@ -13,70 +14,99 @@
   <header class="relative h-[70vh] bg-cover bg-center" style="background-image:url('images/hero.jpg')">
     <span class="hero-overlay"></span>
     <nav class="container mx-auto flex items-center justify-between py-6 relative z-10 px-6">
-      <h1 class="text-2xl md:text-3xl font-bold text-white">La Physio</h1>
+      <h1 class="text-2xl md:text-3xl font-bold text-white" style="text-shadow: 0 2px 4px rgba(0,0,0,0.6);">La Physio</h1>
       <button id="menu-toggle" class="text-white md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-      <ul id="nav-links" class="hidden md:flex gap-8 text-white font-semibold">
+      <ul id="nav-links" class="hidden md:flex gap-8 text-white font-semibold" style="text-shadow: 0 1px 4px rgba(0,0,0,0.7);">
         <li><a href="#about" class="hover:text-teal-300">Praxis</a></li>
         <li><a href="#services" class="hover:text-teal-300">Leistungen</a></li>
         <li><a href="#contact" class="hover:text-teal-300">Kontakt</a></li>
       </ul>
+      <!-- Mobile Menu (hidden on desktop) -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-gray-800/95 z-20">
+        <ul class="flex flex-col items-center gap-4 py-4 text-white font-semibold">
+          <li><a href="#about" class="hover:text-teal-300">Praxis</a></li>
+          <li><a href="#services" class="hover:text-teal-300">Leistungen</a></li>
+          <li><a href="#contact" class="hover:text-teal-300">Kontakt</a></li>
+        </ul>
+      </div>
     </nav>
     <div class="absolute inset-0 flex items-center justify-center flex-col text-center px-4 z-10">
-      <h2 class="text-4xl md:text-5xl font-extrabold text-white drop-shadow mb-4">
+      <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4" style="text-shadow: 0 2px 5px rgba(0,0,0,0.6);">
         Ihre Physiotherapiepraxis<br/>in Französisch Buchholz
       </h2>
-      <p class="text-lg md:text-2xl text-teal-100">Kompetenz • Empathie • Bewegung</p>
+      <p class="text-lg md:text-2xl text-teal-100" style="text-shadow: 0 2px 5px rgba(0,0,0,0.5);">Kompetenz • Empathie • Bewegung</p>
+      <a href="#contact" class="mt-8 px-8 py-3 bg-teal-500 text-white font-bold rounded-full hover:bg-teal-600 transition duration-300 shadow-lg">Termin vereinbaren</a>
     </div>
   </header>
 
   <main class="container mx-auto py-16 px-6">
-    <section id="about" class="mb-16 max-w-3xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6">Über uns</h3>
-      <p class="text-lg">
-        Bei <strong>La Physio</strong> verbinden wir neueste physiotherapeutische Erkenntnisse
-        mit persönlicher Betreuung. Wir begleiten Sie von der akuten Schmerzbehandlung
-        bis zur langfristigen Prävention – für mehr Lebensqualität.
-      </p>
+    <section id="about" class="mb-20 scroll-mt-20">
+      <h3 class="text-3xl font-bold text-center mb-10">Lernen Sie Ihren Therapeuten kennen</h3>
+      <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-10 max-w-4xl mx-auto bg-gray-50 p-8 rounded-2xl">
+        <img src="images/therapist_placeholder.jpg" alt="Thomas Beyer, Physiotherapeut" class="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0">
+        <div>
+          <h4 class="text-2xl font-bold mb-2">Thomas Beyer</h4>
+          <p class="text-teal-600 font-semibold mb-4">Staatlich anerkannter Physiotherapeut</p>
+          <p class="text-lg">
+            Mit Leidenschaft und Fachkompetenz begleite ich Sie auf Ihrem Weg zu mehr Beweglichkeit und Schmerzfreiheit. Mein Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen Ihrer Beschwerden zu finden und gemeinsam mit Ihnen eine nachhaltige Lösung zu erarbeiten.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="services" class="mb-20">
+    <section id="services" class="mb-20 scroll-mt-20">
       <h3 class="text-3xl font-bold text-center mb-10">Leistungen</h3>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden hover:-translate-y-1 transition">
           <img src="images/manual_therapy.jpg" alt="Manuelle Therapie" class="h-48 w-full object-cover">
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Manuelle Therapie</h4>
-            <p class="text-sm text-gray-600">Gezielte Handgriffe zur Mobilisation von Gelenken und Weichteilen.</p>
+            <p class="text-sm text-gray-600">Gezielte Handgriffe zur Untersuchung und Behandlung von Funktionsstörungen des Bewegungsapparates (Gelenke, Muskeln, Nerven).</p>
           </div>
         </div>
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden hover:-translate-y-1 transition">
           <img src="images/exercise.jpg" alt="Krankengymnastik" class="h-48 w-full object-cover">
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Krankengymnastik</h4>
-            <p class="text-sm text-gray-600">Individuelle Übungsprogramme für Kraft, Koordination &amp; Beweglichkeit.</p>
+            <p class="text-sm text-gray-600">Aktive und passive Übungen zur Wiederherstellung und Verbesserung von Kraft, Ausdauer, Koordination und Beweglichkeit.</p>
           </div>
         </div>
         <div class="bg-white shadow-xl rounded-2xl overflow-hidden hover:-translate-y-1 transition">
           <img src="images/consult.jpg" alt="Beratung & Prävention" class="h-48 w-full object-cover">
           <div class="p-6">
             <h4 class="text-xl font-semibold mb-2">Beratung &amp; Prävention</h4>
-            <p class="text-sm text-gray-600">Haltungsanalyse und Tipps für einen gesunden Alltag.</p>
+            <p class="text-sm text-gray-600">Wir geben Ihnen wertvolle Tipps für einen ergonomischen Arbeitsplatz und rückenfreundlichen Alltag, um Beschwerden vorzubeugen.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="mb-20">
+    <section id="testimonials" class="mb-20 bg-teal-50/50 py-16 rounded-2xl">
+      <h3 class="text-3xl font-bold text-center mb-10">Was unsere Patienten sagen</h3>
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto px-6">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">"Nach langer Suche habe ich hier endlich die Hilfe gefunden, die ich brauchte. Sehr kompetent und einfühlsam. Absolute Empfehlung!"</p>
+          <p class="font-bold text-right text-gray-700">- M. Schmidt</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">"Die Behandlung war super erfolgreich und die Atmosphäre in der Praxis ist sehr angenehm. Man fühlt sich sofort gut aufgehoben."</p>
+          <p class="font-bold text-right text-gray-700">- A. Meier</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="mb-20 scroll-mt-20">
       <h3 class="text-3xl font-bold text-center mb-10">Kontakt &amp; Öffnungszeiten</h3>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="space-y-4">
           <p><strong>Adresse</strong><br/>Arnouxstraße 10<br/>13127&nbsp;Berlin</p>
-          <p><strong>Telefon</strong><br/><a href="tel:030-55606228" class="text-teal-600 hover:underline">030 12345678</a></p>
-          <p><strong>E‑Mail</strong><br/><a href="mailto:laphysio@outlook.de" class="text-teal-600 hover:underline">info@la-physio.de</a></p>
+          <p><strong>Telefon</strong><br/><a href="tel:030-55606228" class="text-teal-600 hover:underline">030-55606228</a></p>
+          <p><strong>E‑Mail</strong><br/><a href="mailto:laphysio@outlook.de" class="text-teal-600 hover:underline">laphysio@outlook.de</a></p>
+          <p class="mt-4"><strong>Kassen</strong><br/>Alle Kassen und Privat</p>
         </div>
         <div>
           <table class="w-full text-left">
@@ -93,14 +123,15 @@
     </section>
 
     <section id="map" class="rounded-xl overflow-hidden shadow-lg">
-      <iframe title="Karte" src="https://www.openstreetmap.org/export/embed.html?bbox=13.401%2C52.571%2C13.411%2C52.581&layer=mapnik&marker=52.5762%2C13.406" class="w-full h-[350px] border-0"></iframe>
+      <iframe title="Karte" src="https://www.openstreetmap.org/export/embed.html?bbox=13.423962593078615%2C52.60635589887144%2C13.427503108978273%2C52.60772087281507&amp;layer=mapnik&amp;marker=52.607038900028556%2C13.425731999999925" class="w-full h-[350px] border-0"></iframe>
     </section>
   </main>
 
   <footer class="bg-gray-900 text-gray-300 py-6">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
       <p>&copy; 2025 La Physio – Berlin. Alle Rechte vorbehalten.</p>
-      <ul class="flex gap-6">
+      <ul class="flex gap-6 items-center">
+        <li><a href="#" class="hover:text-white text-sm">Nach oben ↑</a></li>
         <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
         <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
       </ul>

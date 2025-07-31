@@ -7,3 +7,8 @@
 .hero-overlay {
   @apply absolute inset-0 bg-black/50;
 }
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}

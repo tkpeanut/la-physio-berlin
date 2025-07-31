@@ -1,4 +1,4 @@
 
 document.getElementById('menu-toggle').addEventListener('click', () => {
-  document.getElementById('nav-links').classList.toggle('hidden');
+  document.getElementById('mobile-menu').classList.toggle('hidden');
 });
