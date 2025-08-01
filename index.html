@@ -13,7 +13,7 @@
 <body class="font-['Inter'] text-gray-800">
   <header class="relative h-[70vh] bg-cover bg-center" style="background-image:url('images/hero.jpg')">
     <span class="hero-overlay"></span>
-    <nav class="container mx-auto flex items-center justify-between py-6 relative z-10 px-6">
+    <nav class="container mx-auto flex items-center justify-between py-6 relative z-20 px-6">
       <h1 class="text-2xl md:text-3xl font-bold text-white" style="text-shadow: 0 2px 4px rgba(0,0,0,0.6);">La Physio</h1>
       <button id="menu-toggle" class="text-white md:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -23,6 +23,7 @@
       <ul id="nav-links" class="hidden md:flex gap-8 text-white font-semibold" style="text-shadow: 0 1px 4px rgba(0,0,0,0.7);">
         <li><a href="#about" class="hover:text-teal-300">Praxis</a></li>
         <li><a href="#services" class="hover:text-teal-300">Leistungen</a></li>
+        <li><a href="jobs.html" class="hover:text-teal-300">Jobs</a></li>
         <li><a href="#contact" class="hover:text-teal-300">Kontakt</a></li>
       </ul>
       <!-- Mobile Menu (hidden on desktop) -->
@@ -30,6 +31,7 @@
         <ul class="flex flex-col items-center gap-4 py-4 text-white font-semibold">
           <li><a href="#about" class="hover:text-teal-300">Praxis</a></li>
           <li><a href="#services" class="hover:text-teal-300">Leistungen</a></li>
+          <li><a href="jobs.html" class="hover:text-teal-300">Jobs</a></li>
           <li><a href="#contact" class="hover:text-teal-300">Kontakt</a></li>
         </ul>
       </div>
@@ -45,15 +47,29 @@
 
   <main class="container mx-auto py-16 px-6">
     <section id="about" class="mb-20 scroll-mt-20">
-      <h3 class="text-3xl font-bold text-center mb-10">Lernen Sie Ihren Therapeuten kennen</h3>
-      <div class="flex flex-col md:flex-row items-center text-center md:text-left gap-10 max-w-4xl mx-auto bg-gray-50 p-8 rounded-2xl">
-        <img src="images/therapist_placeholder.jpg" alt="Thomas Beyer, Physiotherapeut" class="w-48 h-48 rounded-full object-cover shadow-lg flex-shrink-0">
-        <div>
-          <h4 class="text-2xl font-bold mb-2">Thomas Beyer</h4>
-          <p class="text-teal-600 font-semibold mb-4">Staatlich anerkannter Physiotherapeut</p>
-          <p class="text-lg">
-            Mit Leidenschaft und Fachkompetenz begleite ich Sie auf Ihrem Weg zu mehr Beweglichkeit und Schmerzfreiheit. Mein Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen Ihrer Beschwerden zu finden und gemeinsam mit Ihnen eine nachhaltige Lösung zu erarbeiten.
-          </p>
+      <h3 class="text-3xl font-bold text-center mb-10">Lernen Sie unser Team kennen</h3>
+      <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+        <!-- Therapist 1 -->
+        <div class="flex flex-col items-center text-center bg-gray-50 p-8 rounded-2xl">
+          <img src="images/therapist_placeholder.jpg" alt="Thomas Beyer, Physiotherapeut" class="w-40 h-40 rounded-full object-cover shadow-lg flex-shrink-0 mb-4">
+          <div>
+            <h4 class="text-2xl font-bold mb-2">Thomas Beyer</h4>
+            <p class="text-teal-600 font-semibold mb-4">Inhaber & Staatlich anerkannter Physiotherapeut</p>
+            <p>
+              Mit Leidenschaft und Fachkompetenz begleite ich Sie auf Ihrem Weg zu mehr Beweglichkeit und Schmerzfreiheit. Mein Ziel ist es, nicht nur Symptome zu behandeln, sondern die Ursachen Ihrer Beschwerden zu finden.
+            </p>
+          </div>
+        </div>
+        <!-- Therapist 2 (Placeholder) - Please update image and text -->
+        <div class="flex flex-col items-center text-center bg-gray-50 p-8 rounded-2xl">
+          <img src="images/therapist2_placeholder.jpg" alt="Zweite Therapeutin" class="w-40 h-40 rounded-full object-cover shadow-lg flex-shrink-0 mb-4">
+          <div>
+            <h4 class="text-2xl font-bold mb-2">Anna Müller (Beispiel)</h4>
+            <p class="text-teal-600 font-semibold mb-4">Staatlich anerkannte Physiotherapeutin</p>
+            <p>
+              Einfühlsam und mit modernsten Techniken unterstütze ich Sie dabei, Ihre körperlichen Ziele zu erreichen und ein Leben ohne Einschränkungen zu führen.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -99,6 +115,16 @@
       </div>
     </section>
 
+    <section id="jobs" class="mb-20 scroll-mt-20 bg-teal-50/50 py-16 rounded-2xl text-center">
+      <h3 class="text-3xl font-bold mb-4">Wir stellen ein!</h3>
+      <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto px-4">
+        Du bist Physiotherapeut/in mit Herz und suchst eine neue Herausforderung in einem tollen Team? Wir freuen uns auf Dich!
+      </p>
+      <a href="jobs.html" class="px-8 py-3 bg-teal-500 text-white font-bold rounded-full hover:bg-teal-600 transition duration-300 shadow-lg">
+        Zur Stellenanzeige
+      </a>
+    </section>
+
     <section id="contact" class="mb-20 scroll-mt-20">
       <h3 class="text-3xl font-bold text-center mb-10">Kontakt &amp; Öffnungszeiten</h3>
       <div class="grid md:grid-cols-2 gap-8">
@@ -127,17 +153,88 @@
     </section>
   </main>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="hidden fixed bottom-0 left-0 right-0 bg-gray-800 text-white p-4 flex flex-col sm:flex-row justify-between items-center z-50 shadow-lg">
+    <p class="text-sm mb-2 sm:mb-0 mr-4">Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. <a href="datenschutz.html" class="underline hover:text-teal-300">Mehr erfahren</a>.</p>
+    <button id="cookie-accept" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full text-sm flex-shrink-0">
+      Akzeptieren
+    </button>
+  </div>
+
   <footer class="bg-gray-900 text-gray-300 py-6">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
       <p>&copy; 2025 La Physio – Berlin. Alle Rechte vorbehalten.</p>
       <ul class="flex gap-6 items-center">
         <li><a href="#" class="hover:text-white text-sm">Nach oben ↑</a></li>
+        <li><a href="jobs.html" class="hover:text-white">Jobs</a></li>
         <li><a href="impressum.html" class="hover:text-white">Impressum</a></li>
         <li><a href="datenschutz.html" class="hover:text-white">Datenschutz</a></li>
       </ul>
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // --- Mobile Menu Toggle ---
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // --- Smooth Scrolling & Close Mobile Menu on Link Click ---
+      const navLinks = document.querySelectorAll('a[href^="#"]');
+
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+
+          // Handle the "scroll to top" link (href="#")
+          if (targetId === '#') {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
+          } else {
+            // Handle all other anchor links (e.g., href="#about")
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              e.preventDefault();
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          }
+
+          // If the mobile menu is open and a link inside it is clicked, close the menu
+          if (mobileMenu && !mobileMenu.classList.contains('hidden') && this.closest('#mobile-menu')) {
+            mobileMenu.classList.add('hidden');
+          }
+        });
+      });
+
+      // --- Cookie Banner Logic ---
+      const cookieBanner = document.getElementById('cookie-banner');
+      const cookieAccept = document.getElementById('cookie-accept');
+
+      if (cookieBanner && cookieAccept) {
+        // Check if cookie has been accepted
+        if (!localStorage.getItem('cookieAccepted')) {
+          cookieBanner.classList.remove('hidden');
+        }
+
+        // Event listener for accept button
+        cookieAccept.addEventListener('click', function() {
+          localStorage.setItem('cookieAccepted', 'true');
+          cookieBanner.classList.add('hidden');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
